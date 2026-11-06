@@ -98,8 +98,8 @@ INSERT INTO app_user (email, role, password_hash, name, phone) VALUES
   ('javier@example.com',  'USER',  '$2b$12$ZdZvVPBYZHrJVHC63FQcbuA1w0aTrYurFqoYB.pxMv0VgaUGi0.4C', 'Javier',  '611000006'),
   ('sergio@example.com',  'USER',  '$2b$12$ZdZvVPBYZHrJVHC63FQcbuA1w0aTrYurFqoYB.pxMv0VgaUGi0.4C', 'Sergio',  '611000007'),
   ('elena@example.com',   'USER',  '$2b$12$ZdZvVPBYZHrJVHC63FQcbuA1w0aTrYurFqoYB.pxMv0VgaUGi0.4C', 'Elena',   '611000008'),
-  ('laura.martinez@example.com',   'ADMIN', '$2b$12$ZdZvVPBYZHrJVHC63FQcbuA1w0aTrYurFqoYB.pxMv0VgaUGi0.4C', 'Laura Martínez',  '622000001'),
-  ('carlos.perez@example.com', 'ADMIN', '$2b$12$ZdZvVPBYZHrJVHC63FQcbuA1w0aTrYurFqoYB.pxMv0VgaUGi0.4C', 'Carlos Pérez','622000002');
+  ('laura.martinez@example.com',   'ADMIN', '$2b$12$ZdZvVPBYZHrJVHC63FQcbuA1w0aTrYurFqoYB.pxMv0VgaUGi0.4C', 'Laura Martinez',  '622000001'),
+  ('carlos.perez@example.com', 'ADMIN', '$2b$12$ZdZvVPBYZHrJVHC63FQcbuA1w0aTrYurFqoYB.pxMv0VgaUGi0.4C', 'Carlos Perez','622000002');
 
 -- ---------------------------------------------------------------------------
 -- 7. Crear los 2 perfiles de trabajador: horario semanal (lunes cerrado,

@@ -84,6 +84,8 @@ The backend waits for PostgreSQL to be healthy and applies the Flyway migrations
 
 Create an account with the email you set in `ADMIN_EMAIL` or `SUPERADMIN_EMAIL` to see the admin panel.
 
+A new database has no workers yet, so the booking page shows no free days. Either add a worker with a weekly schedule in **Panel admin → Trabajadores**, or load the [test data](#test-data).
+
 ### Without Docker (optional)
 
 Backend (JDK 21 and Maven, plus a PostgreSQL instance, for example `docker compose up postgres-db`):
@@ -111,9 +113,14 @@ Tests: `mvn test` in `backend/` and `npm test` in `frontend/`.
 
 `scripts/reset-db.sql` leaves the database in a clean, realistic state: it deletes all appointments and every user except the superadmin, rebuilds the service catalogue, creates 10 fictional test users (2 workers + 8 customers, password `TempTest1234!`) and generates random appointments for 16 days that respect schedules and blocks. It is safe to run several times.
 
+With the app running (works the same in PowerShell, cmd and bash):
+
 ```bash
-docker exec -i peluqueria-postgres-db-1 psql -U peluqueria -d peluqueria < scripts/reset-db.sql
+docker cp scripts/reset-db.sql peluqueria-postgres-db-1:/tmp/reset-db.sql
+docker exec peluqueria-postgres-db-1 psql -U peluqueria -d peluqueria -f /tmp/reset-db.sql
 ```
+
+Then reload the page.
 
 ## Deploying on Render
 
